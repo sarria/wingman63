@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+.root {
+	position: relative;
+	width: 100%;
+
+	.wrapper {
+		width: 80%;
+		max-width: $MAX-WIDTH;
+		margin: 0 auto;
+		display: flex;
+
+		.logo {
+			height: $PAGETOP-HEIGHT;
+			flex-grow: 3;
+			display: flex;
+			align-items: center;
+		}
+
+		.burger {
+			padding-right: $GLOBAL-MARGIN;
+			height: $PAGETOP-HEIGHT;
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+	}
+}

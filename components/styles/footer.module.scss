@@ -1,0 +1,9 @@
+@import '../../styles/variables.scss';
+
+.root {
+	position: relative;
+	width: 100%;
+	margin-top: calc($GLOBAL-MARGIN * 4);
+	margin-bottom: $GLOBAL-MARGIN;
+	text-align: center;
+}
