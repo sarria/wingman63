@@ -7,14 +7,10 @@ import Text from './Text'
 import Label from './Label'
 import Video from './Video'
 import Thumbnails from './Thumbnails'
-// import Images from './Images'
-// import Carousel from './Carousel'
-// import Announcements from './Announcements'
-
-// import Contact from './Contact'
+import Bios from './Bios'
 
 function PageContent({page, global}) {
-	console.log("global ::", global)
+	// console.log("global ::", global)
 	return page ? (
 		<>
 			<Header seo={page.seo} />
@@ -47,6 +43,9 @@ function PageContent({page, global}) {
 						break;
 					case 'thumbnails':
 						ele = <Thumbnails data={module} />
+						break;
+					case 'bios':
+						ele = <Bios data={module} />
 						break;
 					default:
 						// code block

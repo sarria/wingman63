@@ -12,6 +12,10 @@ export default function query(slug) {
 				  burgerNavigationPicture {
 					altText
 					sourceUrl
+					mediaDetails {
+						width
+						height
+					}
 				  }
 				  burgerNavigationLeft {
 					page {
@@ -56,22 +60,35 @@ export default function query(slug) {
 						videoUrl
 						images {
 							image {
-							altText
-							sourceUrl
+								altText
+								sourceUrl
+								mediaDetails {
+									width
+									height
+								}
 							}
 						}
 						thumbnails {
 							image {
-							altText
-							sourceUrl
+								altText
+								sourceUrl
+								mediaDetails {
+									width
+									height
+								}
 							}
 							description
 						}
 						bios {
 							photo {
-							altText
-							sourceUrl
+								altText
+								sourceUrl
+								mediaDetails {
+									width
+									height
+								}
 							}
+							name
 							bio
 						}
 						}

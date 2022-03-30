@@ -12,7 +12,7 @@ const handleClick = () => {
 const PrintNavigation = (items) => {
 
 	const router = useRouter();
-	console.log("router.asPath ::", router.asPath)
+	// console.log("router.asPath ::", router.asPath)
 	return (
 		<>
 			{items.map((item) => (
@@ -51,8 +51,8 @@ const Navigation = ({navigationPicture, navigationLeft, navigationRightTop, navi
 							<Image
 								alt={navigationPicture.altText}
 								src={navigationPicture.sourceUrl}
-								width={1070}
-								height={624}
+								width={navigationPicture.mediaDetails.width}
+								height={navigationPicture.mediaDetails.height}
 							/>}
 						</div>
 					</div>

@@ -5,7 +5,7 @@ import PageContent from '../components/PageContent'
 
 function Page({ global, page }) {
   // console.log("global :: ", global)
-  console.log("Page :: ", page)
+  // console.log("Page :: ", page)
   return page ? <PageContent page={page} global={global} /> : <NotFound page={page} />
 }
 

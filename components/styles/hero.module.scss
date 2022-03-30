@@ -3,6 +3,7 @@
 .root {
 	position: relative;
 	color: white;
+	margin-bottom: $GLOBAL-MARGIN * 2;
 
 	.background {
 		display: flex;

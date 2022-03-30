@@ -16,6 +16,22 @@ body {
   color: #707070;
 }
 
+/*
+
+*/
+
+.ratio_container .outer {
+  width: 100%;
+  padding-top: 100%; /* defines aspect ratio */
+  position: relative;
+}
+.ratio_container .outer .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
 /*
 <div style={{"--aspect-ratio":16/9}} className={styles.box}></div>

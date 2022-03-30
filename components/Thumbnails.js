@@ -1,12 +1,23 @@
 import parse from 'html-react-parser';
 import styles from './styles/thumbnails.module.scss'
+import ImageRatio from './elements/ImageRatio'
 
 const Thumbnails = ({data}) => {
-
+	// console.log('data?.thumbnails :: ', data.thumbnails)
 	return data?.thumbnails && (
 		<div className={styles.root}>
 			<div className={styles.wrapper}>
-				THUMBNAILS VAN AQUI
+				{data.thumbnails.map((item) => (
+					<div key={item.image.sourceUrl} className={styles.item}>
+
+						<ImageRatio image={item.image} ratio='60%' />
+
+						<div className={styles.description}>
+							{parse(item.description)}
+						</div>
+
+					</div>
+				))}
 			</div>
 		</div>
 	)
