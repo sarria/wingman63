@@ -5,7 +5,6 @@ import styles from './styles/hero.module.scss'
 function Hero({ title, headerImage }) {
 	return (
 		<div className={styles.root}>
-			ok
 			<div className={styles.background}>
 				<div className={styles.left}></div>
 				<div className={styles.right}></div>
