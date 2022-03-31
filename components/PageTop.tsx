@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import Link from 'next/link'
 import cx from 'classnames'
 import Image from 'next/image'
 import Burger from './Burger'
@@ -10,12 +11,14 @@ function PageTop({ navigation }: { navigation: object }): ReactElement {
 		<div className={cx('pageTop', styles.root)}>
 			<div className={styles.wrapper}>
 				<div className={styles.logo}>
-					<Image
-						alt=''
-						src={Logo}
-						width={420}
-						height={71}
-					/>
+					<Link href="/" passHref>
+						<Image
+							alt=''
+							src={Logo}
+							width={420}
+							height={71}
+						/>
+					</Link>
 				</div>
 				<div className={styles.burger}>
 					<Burger />

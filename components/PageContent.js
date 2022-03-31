@@ -15,7 +15,7 @@ function PageContent({page, global}) {
 		<>
 			<Header seo={page.seo} />
 
-			{page.slug !== 'home-page' && 
+			{/* {page.slug !== 'home-page' &&  */}
 				<>
 					<Navigation 
 						navigationPicture={global.burgerNavigationPicture}
@@ -26,7 +26,7 @@ function PageContent({page, global}) {
 					<PageTop />					
 					<Hero title={page.title} headerImage={page.content_blocks.headerImage} />
 				</>
-			}
+			{/* } */}
 
 			{page.content_blocks.modules && page.content_blocks.modules.map((module, idx) => {
 				let ele = <>{module.moduleType}</>
