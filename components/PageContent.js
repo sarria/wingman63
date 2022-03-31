@@ -59,11 +59,7 @@ function PageContent({page, global}) {
 			})}
 
 			<Footer 
-				email={global.email} 
-				telephone={global.telephone} 
-				facebook={global.facebook} 
-				twitter={global.twitter} 
-				instagram={global.instagram} 
+				global={global} 
 			/>
 		</>		
 	) : <></>
