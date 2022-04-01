@@ -24,7 +24,7 @@ function PageContent({page, global}) {
 						navigationRightBottom={global.burgerNavigationRightBottom}
 					/>
 					<PageTop />					
-					<Hero title={page.title} headerImage={page.content_blocks.headerImage} />
+					<Hero title={page.title} mobileHeaderImage={page.content_blocks.mobileHeaderImage} desktopHeaderImage={page.content_blocks.desktopHeaderImage} />
 				</>
 			{/* } */}
 

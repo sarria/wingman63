@@ -1,16 +1,14 @@
 import parse from 'html-react-parser';
+import cx from 'classnames'
 import Image from 'next/image'
-// import Link from 'next/link'
 import styles from './styles/footer.module.scss'
 import logoicon from '../images/logoicon.svg'
-import logo from '../images/logo-inner-71x420.png'
-import social from '../images/icons.svg'
-
-// import logo from '../public/PSLogo-footer.png'
-// import facebookImg from '../public/facebook.png'
-// import twitterImg from '../public/twitter.png'
-// import instagramImg from '../public/instagram.png'
-// import decorationImg from '../public/decoration-footer.png'
+import logo from '../images/logo-3x.png'
+import Link from 'next/link'
+import facebookImg from '../images/facebook.png'
+import twitterImg from '../images/twitter.png'
+import instagramImg from '../images/instagram.png'
+import youTubeImg from '../images/youtube.png'
 
 const Footer = ({global}) => {
 	console.log("footer global ::", global)
@@ -18,20 +16,76 @@ const Footer = ({global}) => {
 		<footer className={styles.root}>
 			<div className={styles.wrapper}>
 				<div className={styles.left}>
-					<div className={styles.logo}>
-						<Image
-							alt=''
-							src={logo}
-							layout='responsive'
-						/>
-					</div>
-					<div className={styles.social}>
-						<Image
-							alt=''
-							src={social}
-							layout='responsive'
-						/>
-					</div>
+					<div className={cx('grid-container', styles.gridContainer)}>
+						<div className=''>
+							<div className={styles.logo}>
+								<Image
+									alt=''
+									src={logo}
+									layout='responsive'
+								/>
+							</div>							
+						</div>
+						<div className=''>
+							<div className={styles.telephone}>
+								<Link href={'tel:' + global.telephone}>{global.telephone}</Link>
+							</div>
+						</div>							
+						<div className=''>
+							{(global.facebook || global.twitter || global.instagram || global.youtube) && 
+							<div className={styles.social}>
+								{global.facebook && 
+								<div className={cx(styles.ico)}>
+									<div className={styles.facebook}>
+										<a href={global.facebook} target="_blank" rel="noreferrer" >
+											<Image
+												alt=''
+												src={facebookImg}
+												layout='responsive'
+											/>
+										</a>
+									</div>
+								</div>}
+								{global.twitter &&
+								<div className={cx(styles.ico)}>
+									<div className={styles.twitter}>
+										<a href={global.twitter} target="_blank" rel="noreferrer" >
+											<Image
+												alt=''
+												src={twitterImg}
+												layout='responsive'
+											/>
+										</a>
+									</div>
+								</div>}
+								{global.instagram && 
+								<div className={cx(styles.ico)}>
+									<div className={styles.instagram}>
+										<a href={global.instagram} target="_blank" rel="noreferrer" >
+											<Image
+												alt=''
+												src={instagramImg}
+												layout='responsive'
+											/>
+										</a>
+									</div>
+								</div>}
+								{global.youtube && 
+								<div className={cx(styles.ico)}>
+									<div className={styles.youtube}>
+										<a href={global.youtube} target="_blank" rel="noreferrer" >
+											<Image
+												alt=''
+												src={youTubeImg}
+												layout='responsive'
+											/>
+										</a>
+									</div>
+								</div>}
+							</div>}						
+						</div>
+						
+					</div> 
 				</div>
 				<div className={styles.right}>
 					<div className={styles.quote}>
@@ -47,6 +101,11 @@ const Footer = ({global}) => {
 							/>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div className={styles.copyRight}>
+				<div className={styles.inner}>
+					{parse(global.copyRight)}
 				</div>
 			</div>
 		</footer>

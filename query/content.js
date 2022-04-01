@@ -6,11 +6,13 @@ export default function query(slug) {
 				global {
 				  address
 				  footerQuote
+				  copyRight
 				  email
 				  telephone
 				  facebook
 				  twitter
 				  instagram
+				  youtube
 				  burgerNavigationPicture {
 					altText
 					sourceUrl
@@ -51,9 +53,21 @@ export default function query(slug) {
 					slug
 					title
 					content_blocks {
-						headerImage {
-						altText
-						sourceUrl
+						desktopHeaderImage {
+							altText
+							sourceUrl
+							mediaDetails {
+								width
+								height
+							}
+						}
+						mobileHeaderImage {
+							altText
+							sourceUrl
+							mediaDetails {
+								width
+								height
+							}
 						}
 						modules {
 						moduleType

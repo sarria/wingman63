@@ -16,6 +16,10 @@ body {
   color: #707070;
 }
 
+.grid-container {
+  display: inline-grid;
+}
+
 /*
 
 */

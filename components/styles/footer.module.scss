@@ -3,11 +3,14 @@
 .root {
 	position: relative;
 	width: 100%;
-	height: 400px;
 	color: white;
 	margin-top: $GLOBAL-MARGIN * 4;
-	background-image: url('/images/footer-background-line.png');
+	background-color: black;
 
+	@include md {
+		background-image: url('/images/footer-background-line.png');
+		background-repeat: repeat-y;
+	}
 
 	.wrapper {
 		width: 100%;
@@ -23,44 +26,149 @@
 		}
 
 		.left {
-			width: 50%;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
 			padding-top: 80px;
 
-			.logo {
-				width: 310px;
+			@include md {
+				display: block;
+				width: 50%;
 			}
 
-			.social {
-				width: 310px;
+			.gridContainer {
+				grid-template-columns: auto;
+				justify-content: center;
+
+				@include md {
+					grid-template-columns: auto auto;
+					justify-content: left;
+				}
+
+				.logo {
+					width: 310px;
+				}
+
+				.telephone {
+					display: flex;
+					justify-content: center;
+					color: $GOLDEN-COLOR;
+					margin-top: 40px;
+					font-size: 45px;
+					font-weight: 700;
+
+					a {
+						color: inherit;
+						text-decoration: none;
+					}
+
+					@include md {
+						display: block;
+						color: white;
+						display: flex;
+						align-items: flex-end;
+						margin-left: 30px;
+						margin-top: 26px;
+						font-size: unset;
+						font-weight: 600;
+					}
+				}
+
+				.social {
+					display: flex;
+					justify-content: space-between;
+					margin-top: 40px;
+					$ICO-WIDTH: 2;
+
+					@include md {
+						margin-left: 45px;
+						margin-top: 15px;
+						width: 265px;
+					}
+
+					.ico {
+						position: relative;
+
+						.facebook {
+							width: calc(23px / $ICO-WIDTH);
+						}
+						.twitter {
+							width: calc(59px / $ICO-WIDTH);
+						}
+						.instagram {
+							width: calc(49px / $ICO-WIDTH);
+						}
+						.youtube {
+							width: calc(67px / $ICO-WIDTH);
+						}
+					}
+				}
 			}
+
 		}
 
 		.right {
-			width: 50%;
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			padding-top: 120px;
+			padding-top: 50px;
+
+			@include md {
+				width: 50%;
+				padding-top: 108px;
+			}
 
 			@include md {
 				flex-direction: row;
 			}
 	
 			.quote {
-				width: 40%;
-				
+				margin: 0 30px;
+
+				@include md {
+					width: 50%;
+					margin: 0;
+				}				
 			}
 
 			.address {
-				width: 30%;
+				padding-top: $GLOBAL-MARGIN;
+				margin: 0 30px;
+
+				@include md {
+					width: 40%;
+					padding: 0;
+				}
 
 				.smallLogo {
 					position: relative;
 					width: 100%;
-					padding-top: $GLOBAL-MARGIN;
-
+					margin: 0;
 				}
 			}
 		}
+	}
+
+	.copyRight {
+		margin-top: 50px;
+		padding-bottom: 20px;
+		
+		@include md {
+			width: 80%;
+			flex-direction: row;
+			max-width: $MAX-WIDTH;
+			margin-top: 100px;
+			margin: 0 auto;
+		}
+
+		.inner {
+			width: fit-content;
+			margin: 0 auto;
+
+			@include md {
+				margin-left: 45px;
+			}
+		}		
 	}
 }

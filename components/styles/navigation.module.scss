@@ -21,11 +21,20 @@
 
 		.content {
 			display: flex;
-			padding: $PAGETOP-HEIGHT 52px 64px 72px;
+			padding: $PAGETOP-HEIGHT 0 64px 40px;			
+
+			@include md {
+				padding: $PAGETOP-HEIGHT 52px 64px 72px;
+			}
 
 			.navigation {
-				display: flex;
-				width: 60%;
+				display: block;
+				width: auto;
+
+				@include md {
+					display: flex;
+					width: 60%;
+				}
 
 				.item {
 					padding-bottom: 7px;
@@ -47,7 +56,11 @@
 				}
 
 				.left {
-					width: 50%;
+					width: auto;
+
+					@include md {
+						width: 50%;
+					}
 				}
 
 				.right {
@@ -62,7 +75,12 @@
 			}
 
 			.picture {
-				width: 40%;
+				display: none;
+
+				@include md {
+					display: block;
+					width: 40%;
+				}
 			}
 		}
 	
