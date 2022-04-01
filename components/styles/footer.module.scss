@@ -9,7 +9,6 @@
 
 	@include md {
 		background-image: url('/images/footer-background-line.png');
-		background-repeat: repeat-y;
 	}
 
 	.wrapper {
@@ -145,6 +144,8 @@
 					position: relative;
 					width: 100%;
 					margin: 0;
+					width: 175px;
+					padding-top: 20px;
 				}
 			}
 		}
