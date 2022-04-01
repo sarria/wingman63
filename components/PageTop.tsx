@@ -15,8 +15,10 @@ function PageTop({ navigation }: { navigation: object }): ReactElement {
 						<Image
 							alt=''
 							src={Logo}
-							width={420}
-							height={71}
+							width={335}
+							height={57}
+							// width={420}
+							// height={71}
 						/>
 					</Link>
 				</div>
