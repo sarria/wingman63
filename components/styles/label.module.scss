@@ -6,17 +6,20 @@
 	padding-top: $GLOBAL-MARGIN;
 
 	.wrapper {
-		font-size: 50px;
+		font-size: 20px;
 		font-weight: 800;
 		line-height: 1;
-		letter-spacing: -5px;
+		letter-spacing: -2px;
 		text-align: left;
+		padding-left: 35px;
 		
 		@include lg {
 			width: 80%;
 			max-width: $MAX-WIDTH;
 			margin: 0 auto;
 			padding: 0px;
+			font-size: 50px;
+			letter-spacing: -5px;
 		}
 	
 	}	
