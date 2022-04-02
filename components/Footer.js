@@ -11,7 +11,7 @@ import instagramImg from '../images/instagram.png'
 import youTubeImg from '../images/youtube.png'
 
 const Footer = ({global}) => {
-	console.log("footer global ::", global)
+	// console.log("footer global ::", global)
 	return (
 		<footer className={styles.root}>
 			<div className={styles.wrapper}>

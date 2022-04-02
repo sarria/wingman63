@@ -3,10 +3,14 @@
 .root {
 	position: relative;
 	width: 100%;
+	height: $PAGETOP-HEIGHT;
+	z-index: 8;
+
+	&.isHomePage {
+		background-color: rgba(0,0,0,0.66);
+	}
 
 	.wrapper {
-		width: auto;
-		display: flex;
 
 		@include md {
 			width: 80%;
@@ -16,15 +20,13 @@
 	
 
 		.logo {
-			height: $PAGETOP-HEIGHT;
-			padding: 0 15px;
-			flex-grow: 3;
-			display: flex;
-			align-items: center;
+			width: 250px;
+			padding: 20px 0 0 0;
 			cursor: pointer;
 
 			@include md {
-				padding: 0;
+				width: 300px;
+				padding: 20px 0 0 0;
 			}
 		}
 

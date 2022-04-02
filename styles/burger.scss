@@ -28,16 +28,16 @@ Animations
 }
 
 // #toggle:checked + .hamburger .topBun {
-#toggle:checked + .navigation + .pageTop .hamburger .topBun {
+#toggle:checked + .navigation + .pageTop + .burger .hamburger .topBun {
 	transition: transform .2s ease-in-out;
 	transform: rotate(-45deg);
 	background-color: #000;
 	top: 14px;	
 }
-#toggle:checked + .navigation + .pageTop .hamburger .meat {
+#toggle:checked + .navigation + .pageTop + .burger .hamburger .meat {
 	opacity: 0;
 }
-#toggle:checked + .navigation + .pageTop .hamburger .bottomBun {
+#toggle:checked + .navigation + .pageTop + .burger .hamburger .bottomBun {
 	transition: transform .2s ease-in-out;
 	transform: rotate(45deg);
 	background-color: #000;

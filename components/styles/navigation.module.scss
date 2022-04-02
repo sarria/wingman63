@@ -8,8 +8,9 @@
 	color: black;
 
 	.wrapper {
-		background-color: $GOLDEN-COLOR;
-		opacity: 0.98;
+		// background-color: $GOLDEN-COLOR;
+		// opacity: 0.98;
+		background-color: rgba(247, 176, 8, 0.97);
 		font-size: 24px;
 		font-weight: 500;
 
@@ -24,7 +25,7 @@
 			padding: $PAGETOP-HEIGHT 0 64px 40px;			
 
 			@include md {
-				padding: $PAGETOP-HEIGHT 52px 64px 72px;
+				padding: $PAGETOP-HEIGHT 52px 64px 50px;
 			}
 
 			.navigation {

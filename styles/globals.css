@@ -16,6 +16,11 @@ body {
   color: #707070;
 }
 
+/* .burger {
+  z-index: 99;
+  position: absolute;
+} */
+
 .grid-container {
   display: inline-grid;
 }

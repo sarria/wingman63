@@ -53,6 +53,16 @@ export default function query(slug) {
 					slug
 					title
 					content_blocks {
+						carousel {
+							image {
+							  altText
+							  sourceUrl
+							  mediaDetails {
+								width
+								height
+							  }
+							}
+						}
 						desktopHeaderImage {
 							altText
 							sourceUrl

@@ -1,6 +1,6 @@
 import Header from './Header'
 import Footer from './Footer'
-import PageTop from './PageTop'
+import Logo from './Logo'
 import Navigation from './Navigation'
 import Hero from './Hero'
 import Text from './Text'
@@ -8,26 +8,29 @@ import Label from './Label'
 import Video from './Video'
 import Thumbnails from './Thumbnails'
 import Bios from './Bios'
+import Carousel from './Carousel'
+import Burger from './Burger'
 
 function PageContent({page, global}) {
-	// console.log("global ::", global)
+	// console.log("page ::", page)
+
+	const isHomePage = page.slug === 'home-page';
+
 	return page ? (
 		<>
 			<Header seo={page.seo} />
 
-			{/* {page.slug !== 'home-page' &&  */}
-				<>
-					<Navigation 
-						navigationPicture={global.burgerNavigationPicture}
-						navigationLeft={global.burgerNavigationLeft}
-						navigationRightTop={global.burgerNavigationRightTop}
-						navigationRightBottom={global.burgerNavigationRightBottom}
-					/>
-					<PageTop />					
-					<Hero title={page.title} mobileHeaderImage={page.content_blocks.mobileHeaderImage} desktopHeaderImage={page.content_blocks.desktopHeaderImage} />
-				</>
-			{/* } */}
-
+			<Navigation
+				navigationPicture={global.burgerNavigationPicture}
+				navigationLeft={global.burgerNavigationLeft}
+				navigationRightTop={global.burgerNavigationRightTop}
+				navigationRightBottom={global.burgerNavigationRightBottom}
+			/>
+			<Logo isHomePage={isHomePage} />
+			<Burger />
+			{isHomePage  && <Carousel carousel={page.content_blocks.carousel} />}
+			{!isHomePage && <Hero title={page.title} mobileHeaderImage={page.content_blocks.mobileHeaderImage} desktopHeaderImage={page.content_blocks.desktopHeaderImage} />}
+			
 			{page.content_blocks.modules && page.content_blocks.modules.map((module, idx) => {
 				let ele = <>{module.moduleType}</>
 				
