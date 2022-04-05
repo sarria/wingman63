@@ -8,7 +8,7 @@ import Image from 'next/image'
 // https://react-slick.neostack.com/docs/get-started
 
 const Carousel = ({carousel}) => {
-	console.log("carousel ::", carousel)
+	// console.log("carousel ::", carousel)
 
 	const settings = {
 		dots: true,

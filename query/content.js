@@ -52,15 +52,17 @@ export default function query(slug) {
 					node {
 					slug
 					title
-					content_blocks {
+					carousel {
 						carousel {
-							altText
-							sourceUrl
-							mediaDetails {
-							  width
-							  height
-							}
+						  altText
+						  sourceUrl
+						  mediaDetails {
+							width
+							height
+						  }
 						}
+					}					
+					content_blocks {
 						desktopHeaderImage {
 							altText
 							sourceUrl

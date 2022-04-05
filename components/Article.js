@@ -9,7 +9,7 @@ const Article = ({data}) => {
 		<div className={styles.root}>
 			<div className={styles.wrapper}>
 				<div className='left'>
-
+					image here
 				</div>
 				<div className='right'>
 					<div className='headline'>

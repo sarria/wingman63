@@ -3,7 +3,7 @@ import styles from './styles/thumbnails.module.scss'
 import ImageRatio from './elements/ImageRatio'
 
 const Thumbnails = ({data}) => {
-	console.log('data?.thumbnails :: ', data.thumbnails)
+	// console.log('thumbnails :: ', data.thumbnails)
 
 	return data?.thumbnails && (
 		<div className={styles.root}>
