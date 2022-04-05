@@ -54,13 +54,11 @@ export default function query(slug) {
 					title
 					content_blocks {
 						carousel {
-							image {
-							  altText
-							  sourceUrl
-							  mediaDetails {
-								width
-								height
-							  }
+							altText
+							sourceUrl
+							mediaDetails {
+							  width
+							  height
 							}
 						}
 						desktopHeaderImage {
@@ -80,43 +78,59 @@ export default function query(slug) {
 							}
 						}
 						modules {
-						moduleType
-						label
-						text
-						videoUrl
-						images {
+							moduleType
+							label
+							text
+							videoUrl
+							images {
+								image {
+									altText
+									sourceUrl
+									mediaDetails {
+										width
+										height
+									}
+								}
+							}
+							thumbnails {
+								image {
+									altText
+									sourceUrl
+									mediaDetails {
+										width
+										height
+									}
+								}
+								description
+							}
+							bios {
+								photo {
+									altText
+									sourceUrl
+									mediaDetails {
+										width
+										height
+									}
+								}
+								name
+								bio
+							}
 							image {
 								altText
 								sourceUrl
 								mediaDetails {
-									width
-									height
+								  width
+								  height
+								}
+							  }
+							  headline
+							  linkLabel
+							  linkPage {
+								... on Page {
+								  slug
+								  title
 								}
 							}
-						}
-						thumbnails {
-							image {
-								altText
-								sourceUrl
-								mediaDetails {
-									width
-									height
-								}
-							}
-							description
-						}
-						bios {
-							photo {
-								altText
-								sourceUrl
-								mediaDetails {
-									width
-									height
-								}
-							}
-							name
-							bio
-						}
 						}
 					}
 					seo {

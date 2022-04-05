@@ -23,12 +23,12 @@ const Carousel = ({carousel}) => {
 			<div className={styles.root}>
 				<div className={styles.wrapper}>
 					<Slider {...settings}>
-					{carousel.map((item, idx) => (
+					{carousel && carousel.map((image, idx) => (
 						<div key={idx}>
 							<div className={styles.image}>
 								<Image
-									alt=''
-									src={item.image.sourceUrl}
+									alt={image.altText}
+									src={image.sourceUrl}
 									layout='fill'
 									objectFit='cover'
 									

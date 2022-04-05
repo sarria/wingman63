@@ -6,6 +6,7 @@ import PageContent from '../components/PageContent'
 function Page({ global, page }) {
   // console.log("global :: ", global)
   // console.log("Page :: ", page)
+  // console.log("Query ::", queryContent('about-us'))
   return page ? <PageContent page={page} global={global} /> : <NotFound page={page} />
 }
 
@@ -15,13 +16,14 @@ function Page({ global, page }) {
 export async function getStaticProps(context) {
   const res = await fetch(process.env.GRAPHQL + queryContent(context.params.slug))
   const data = await res.json()
-  const global = data.data?.acfOptionsGlobalOptions?.global
-  const content = data.data?.content?.edges[0]?.node
+  console.log('fetch ::', data)
+  const global = data.data?.acfOptionsGlobalOptions?.global || null
+  const page = data.data?.content?.edges[0]?.node || null
 
   return {
     props: {
       global,
-      page: typeof content === 'undefined' ? null : content
+      page
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in

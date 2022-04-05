@@ -5,6 +5,7 @@ import PageContent from '../components/PageContent'
 // https://reactjsexample.com/minimal-carousel-component-for-react/
 
 function Index({ global, page }) {
+  // console.log("Query ::", queryContent('home-page'))
   return page ? <PageContent page={page} global={global} /> : <NotFound page={page} />
 }
 
@@ -14,13 +15,13 @@ function Index({ global, page }) {
 export async function getStaticProps() {
 	const res = await fetch(process.env.GRAPHQL + queryContent('home-page'))
 	const data = await res.json()
-	const global = data.data?.acfOptionsGlobalOptions?.global
-	const content = data.data?.content?.edges[0]?.node
+	const global = data.data?.acfOptionsGlobalOptions?.global || null
+  const page = data.data?.content?.edges[0]?.node || null
 
   return {
     props: {
       global,
-      page: typeof content === 'undefined' ? null : content
+      page
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in

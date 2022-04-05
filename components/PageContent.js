@@ -10,6 +10,7 @@ import Thumbnails from './Thumbnails'
 import Bios from './Bios'
 import Carousel from './Carousel'
 import Burger from './Burger'
+import Article from './Article'
 
 function PageContent({page, global}) {
 	// console.log("page ::", page)
@@ -50,6 +51,9 @@ function PageContent({page, global}) {
 					case 'bios':
 						ele = <Bios data={module} />
 						break;
+					// case 'article':
+					// 	ele = <Article data={module} />
+					// 	break;
 					default:
 						// code block
 				}
