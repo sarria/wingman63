@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, forwardRef } from 'react';
 import Link from 'next/link'
 import cx from 'classnames'
 import Image from 'next/image'

@@ -29,7 +29,7 @@ function PageContent({page, global}) {
 			/>
 			<Logo isHomePage={isHomePage} />
 			<Burger />
-			{isHomePage  && <Carousel carousel={page.carousel.carousel} />}
+			{isHomePage  && <Carousel carousel={page.homePage.carousel} />}
 			{!isHomePage && <Hero title={page.title} mobileHeaderImage={page.content_blocks.mobileHeaderImage} desktopHeaderImage={page.content_blocks.desktopHeaderImage} />}
 			
 			{page.content_blocks.modules && page.content_blocks.modules.map((module, idx) => {

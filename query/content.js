@@ -52,7 +52,7 @@ export default function query(slug) {
 					node {
 					slug
 					title
-					carousel {
+					homePage {
 						carousel {
 						  altText
 						  sourceUrl
