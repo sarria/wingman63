@@ -6,7 +6,7 @@ const Label = ({data}) => {
 	return data?.label && (
 		<div className={styles.root}>
 			<div className={styles.wrapper}>
-				<h2>{parse(data.label)}</h2>
+				<h2>{parse(data.label.toUpperCase())}</h2>
 			</div>
 		</div>
 	)

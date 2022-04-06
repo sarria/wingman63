@@ -5,10 +5,10 @@ import ImageRatio from './elements/ImageRatio'
 import styles from './styles/imageCard.module.scss'
 
 const ImageCard = ({image, ratio, hasPadding}) => {
-	console.log('imageCard :: ', image, ratio)
+	// console.log('imageCard :: ', image, ratio)
 	const hasLink = image.linkPage?.slug ? 'hasLink' : ''
 	const label = image.linkLabel || image.linkPage?.title
-	console.log('link ', image.linkPage?.slug || '/')
+	// console.log('link ', image.linkPage?.slug || '/')
 	return (
 		<Link href={image.linkPage?.slug || '/'} passHref>
 		<div className={cx(styles.root)}>

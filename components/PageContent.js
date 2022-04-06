@@ -36,6 +36,7 @@ function PageContent({page, global}) {
 			
 			{page.content_blocks.modules && page.content_blocks.modules.map((module, idx) => {
 				let ele = <>{module.moduleType}</>
+				let prevModuleType = idx > 0 ? page.content_blocks.modules[idx-1].moduleType : '';
 				
 				switch(module.moduleType) {
 					case 'text':
@@ -57,7 +58,7 @@ function PageContent({page, global}) {
 						ele = <Article data={module} />
 						break;
 					case 'images':
-						ele = <Images data={module} />
+						ele = <Images data={{...module, prevModuleType}} />
 						break;
 					case 'quotes':
 						ele = <Quotes data={module} />
@@ -65,7 +66,7 @@ function PageContent({page, global}) {
 					default:
 						// code block
 				}
-				
+		
 				return (
 					<div key={idx}>
 						{ele}

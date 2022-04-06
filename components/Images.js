@@ -3,13 +3,14 @@ import styles from './styles/images.module.scss'
 import ImageCard from './imageCard'
 
 const Images = ({data}) => {
-	const {imagesLayout, imagePadding, images} = data;
+	console.log('Images data ::', data)
+	const {prevModuleType, imagesLayout, imagePadding, images} = data;
 	const hasPadding = imagePadding ? 'padding' : '';
-	console.log('Images ::', imagesLayout, images, data)
+	// console.log('Images ::', imagesLayout, images, data)
 
 	return (
 		<>
-			{imagesLayout === '23_13' && <div className={cx(styles.root, styles['layout_' + imagesLayout])}>
+			{imagesLayout === '23_13' && <div className={cx(styles.root, styles['layout_' + imagesLayout], {[styles.paddingTop]: prevModuleType!=='images'})}>
 				{images.length === 3 &&<div className={styles.wrapper}>
 					{images[0]?.image && <div className={cx(styles.image1)}>
 						<ImageCard image={images[0]} hasPadding={hasPadding} ratio='75.4%' />
