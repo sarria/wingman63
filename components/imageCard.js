@@ -18,7 +18,7 @@ const ImageCard = ({image, ratio, hasPadding}) => {
 				</div>
 				{hasLink != '' && 
 				<div className={styles.link}>
-					{label.toUpperCase()}&nbsp;&nbsp;<gold>></gold>
+					{label.toUpperCase()}&nbsp;&nbsp;<gold>&gt;</gold>
 				</div>}
 			</div>
 		</div>	

@@ -23,7 +23,7 @@ const Article = ({data}) => {
 						<Link href={data.linkPage.slug} passHref>
 							{data.linkLabel}
 						</Link>
-						&nbsp;&nbsp;<gold>></gold>
+						&nbsp;&nbsp;<gold>&gt;</gold>
 					</div>
 				</div>
 			</div>
