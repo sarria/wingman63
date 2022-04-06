@@ -3,7 +3,7 @@ import styles from './styles/bios.module.scss'
 import ImageRatio from './elements/ImageRatio'
 
 const Bios = ({data}) => {
-	console.log('data ::', data)
+	// console.log('data ::', data)
 	return data?.bios &&  (
 		<div className={styles.root}>
 			<div className={styles.wrapper}>

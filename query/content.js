@@ -84,6 +84,8 @@ export default function query(slug) {
 							label
 							text
 							videoUrl
+							imagesLayout
+							imagePadding
 							images {
 								image {
 									altText
@@ -91,6 +93,13 @@ export default function query(slug) {
 									mediaDetails {
 										width
 										height
+									}
+								}
+								linkLabel
+								linkPage {
+									... on Page {
+									  slug
+									  title
 									}
 								}
 							}
@@ -124,14 +133,19 @@ export default function query(slug) {
 								  width
 								  height
 								}
-							  }
-							  headline
-							  linkLabel
-							  linkPage {
+							}
+							headline
+							linkLabel
+							linkPage {
 								... on Page {
 								  slug
 								  title
 								}
+							}
+							quotes {
+								quote
+								authorLine1
+								authorLine2
 							}
 						}
 					}

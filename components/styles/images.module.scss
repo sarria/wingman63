@@ -1,0 +1,72 @@
+@import '../../styles/variables.scss';
+
+.root {
+	width: 100%;
+
+	.wrapper {
+		// border: solid 5px blue;
+
+		@include lg {
+			width: 80%;
+			max-width: $MAX-WIDTH;
+			margin: 0 auto;
+			padding: 0px;
+		}
+
+	}
+
+	&.layout_23_13 {
+
+		.wrapper {
+
+			@include lg {
+				display: flex;
+
+				.image1 {
+					width: 65%
+				}
+
+				.image23 {
+					width: 35%
+				}
+			}
+		}
+	}
+
+	&.layout_13_23 {
+
+		.wrapper {
+
+			@include lg {
+				display: flex;
+
+				.image23 {
+					width: 35%
+				}
+
+				.image1 {
+					width: 65%
+				}
+			}
+		}
+	}
+
+	&.layout_13 {
+
+		.wrapper {
+
+			@include lg {
+				display: flex;
+
+				.image1 {
+					width: 35%
+				}
+
+				.image2, .image3 {
+					width: 32.5%
+				}
+			}
+		}
+	}
+
+}

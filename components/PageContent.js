@@ -11,6 +11,8 @@ import Bios from './Bios'
 import Carousel from './Carousel'
 import Burger from './Burger'
 import Article from './Article'
+import Images from './Images'
+import Quotes from './Quotes'
 
 function PageContent({page, global}) {
 	// console.log("page ::", page)
@@ -18,7 +20,7 @@ function PageContent({page, global}) {
 	const isHomePage = page.slug === 'home-page';
 
 	return page ? (
-		<>
+		<div className={isHomePage ? 'homePage' : 'innerPage'}>
 			<Header seo={page.seo} />
 
 			<Navigation
@@ -54,6 +56,12 @@ function PageContent({page, global}) {
 					case 'article':
 						ele = <Article data={module} />
 						break;
+					case 'images':
+						ele = <Images data={module} />
+						break;
+					case 'quotes':
+						ele = <Quotes data={module} />
+						break;
 					default:
 						// code block
 				}
@@ -68,7 +76,7 @@ function PageContent({page, global}) {
 			<Footer 
 				global={global} 
 			/>
-		</>		
+		</div>		
 	) : <></>
 }
 

@@ -11,6 +11,7 @@ const Carousel = ({carousel}) => {
 	// console.log("carousel ::", carousel)
 
 	const settings = {
+		autoplay: true,
 		dots: true,
 		infinite: true,
 		speed: 500,
