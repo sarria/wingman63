@@ -7,7 +7,7 @@ const Bios = ({data}) => {
 	return data?.bios &&  (
 		<div className={styles.root}>
 			<div className={styles.wrapper}>
-			{data.bios.map((item, idx) => (
+			{data.bios.map((item, idx) => item.bio && (
 				<div key={idx} className={styles.item}>
 					<div className={styles.content}>
 						<div className={styles.name}>

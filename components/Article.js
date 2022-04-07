@@ -6,7 +6,7 @@ import styles from './styles/article.module.scss'
 const Article = ({data}) => {
 	// console.log('Article ::', data)
 	
-	return  (
+	return  data.text && (
 		<div className={styles.root}>
 			<div className={styles.wrapper}>
 				<div className={styles.left}>

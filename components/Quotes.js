@@ -20,12 +20,11 @@ const Quotes = ({data}) => {
 		prevArrow: <PrevArrow />
 	};
 
-	return  (
-		<>
-		{<div className={styles.root}>
+	return quotes && (
+		<div className={styles.root}>
 			<div className={styles.wrapper}>
 				<Slider {...settings}>
-				{quotes.map((quote, idx) => (
+				{quotes.map((quote, idx) => quote.quote && (
 					<div key={idx} className={styles.quote}>
 						{quote.quote && <div className={styles.text}>
 							{parse(quote.quote)}
@@ -41,8 +40,7 @@ const Quotes = ({data}) => {
 				))}
 				</Slider>
 			</div>
-		</div>}
-		</>
+		</div>
 	)
 }
 
