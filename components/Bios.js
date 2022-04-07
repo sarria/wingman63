@@ -20,11 +20,11 @@ const Bios = ({data}) => {
 								<ImageRatio image={item.photo} ratio='80%' />
 							</div>
 						</div>
-						<div className={styles.bio}>
+						{item.bio && <div className={styles.bio}>
 							<div className={styles.text}>
 								{parse(item.bio)}
 							</div>
-						</div>
+						</div>}
 					</div>
 				</div>	
 			))}

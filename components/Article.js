@@ -13,18 +13,18 @@ const Article = ({data}) => {
 					<ImageRatio image={data.image} ratio='55%' />
 				</div>
 				<div className={styles.right}>
-					<div className={styles.headline}>
+					{data.headline && <div className={styles.headline}>
 						{parse(data.headline)}
-					</div>
-					<div className={styles.text}>
+					</div>}
+					{data.text && <div className={styles.text}>
 						{parse(data.text)}
-					</div>
-					<div className={styles.link}>
-						<Link href={data.linkPage.slug} passHref>
+					</div>}
+					{styles.link && <div className={styles.link}>
+						{data.linkPage?.slug && <Link href={data.linkPage.slug} passHref>
 							{data.linkLabel}
-						</Link>
+						</Link>}
 						&nbsp;&nbsp;<gold>&gt;</gold>
-					</div>
+					</div>}
 				</div>
 			</div>
 		</div>

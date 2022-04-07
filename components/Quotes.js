@@ -21,14 +21,15 @@ const Quotes = ({data}) => {
 	};
 
 	return  (
-		<div className={styles.root}>
+		<>
+		{<div className={styles.root}>
 			<div className={styles.wrapper}>
 				<Slider {...settings}>
-				{quotes && quotes.map((quote, idx) => (
+				{quotes.map((quote, idx) => (
 					<div key={idx} className={styles.quote}>
-						<div className={styles.text}>
+						{quote.quote && <div className={styles.text}>
 							{parse(quote.quote)}
-						</div>
+						</div>}
 						{quote.authorLine1 &&
 						<div className={styles.authorLine1}>
 							{parse(quote.authorLine1)}
@@ -40,7 +41,8 @@ const Quotes = ({data}) => {
 				))}
 				</Slider>
 			</div>
-		</div>
+		</div>}
+		</>
 	)
 }
 
