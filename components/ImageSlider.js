@@ -10,7 +10,7 @@ import arrowRight from '../images/arrow-right.png'
 
 const ImageSlider = ({data}) => {
 	const {linkPage, slider} = data;
-	console.log('ImageSlider ::', linkPage, slider);
+	// console.log('ImageSlider ::', linkPage, slider);
 
 	const settings = {
 		autoplay: true,
