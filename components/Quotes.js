@@ -47,7 +47,7 @@ const Quotes = ({data}) => {
 export default Quotes;
 
 function NextArrow(props) {
-	const { className, style, onClick } = props;
+	const { className, onClick } = props;
 	return (
 	  <div
 		className={cx(className, styles.nextButton)}

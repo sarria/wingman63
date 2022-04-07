@@ -13,6 +13,7 @@ import Burger from './Burger'
 import Article from './Article'
 import Images from './Images'
 import Quotes from './Quotes'
+import ImageSlider from './ImageSlider'
 
 function PageContent({page, global}) {
 	// console.log("page ::", page)
@@ -63,6 +64,9 @@ function PageContent({page, global}) {
 					case 'quotes':
 						ele = <Quotes data={module} />
 						break;
+					case 'slider':
+						ele = <ImageSlider data={module} />
+						break;						
 					default:
 						// code block
 				}

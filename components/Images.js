@@ -3,7 +3,7 @@ import styles from './styles/images.module.scss'
 import ImageCard from './imageCard'
 
 const Images = ({data}) => {
-	console.log('Images data ::', data)
+	// console.log('Images data ::', data)
 	const {prevModuleType, imagesLayout, imagePadding, images} = data;
 	const hasPadding = imagePadding ? 'padding' : '';
 	// console.log('Images ::', imagesLayout, images, data)

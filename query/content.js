@@ -147,6 +147,14 @@ export default function query(slug) {
 								authorLine1
 								authorLine2
 							}
+							slider {
+								altText
+								sourceUrl
+								mediaDetails {
+								  width
+								  height
+								}
+							}
 						}
 					}
 					seo {
