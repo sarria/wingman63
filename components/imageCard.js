@@ -10,7 +10,7 @@ const ImageCard = ({image, ratio, hasPadding}) => {
 	const label = image.linkLabel || image.linkPage?.title
 	// console.log('link ', image.linkPage?.slug || '/')
 	return (
-		<Link href={image.linkPage?.slug || '/'} passHref>
+		<Link href={image.linkPage?.slug || 'javascript:void(0)'} passHref>
 		<div className={cx(styles.root)}>
 			<div className={cx(styles.wrapper, styles[hasPadding], styles[hasLink], hasLink)}>
 				<div className={cx(styles.image)}>

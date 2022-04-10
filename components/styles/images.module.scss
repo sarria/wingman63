@@ -7,6 +7,10 @@
 		padding-top: $GLOBAL-MARGIN;
 	}
 
+	&.paddingBottom {
+		padding-bottom: $GLOBAL-MARGIN;
+	}
+
 	.wrapper {
 		// border: solid 5px blue;
 
@@ -27,11 +31,11 @@
 				display: flex;
 
 				.image1 {
-					width: 65%
+					width: 65%;
 				}
 
 				.image23 {
-					width: 35%
+					width: 35%;
 				}
 			}
 		}
@@ -45,11 +49,11 @@
 				display: flex;
 
 				.image23 {
-					width: 35%
+					width: 35%;
 				}
 
 				.image1 {
-					width: 65%
+					width: 65%;
 				}
 			}
 		}
@@ -63,12 +67,40 @@
 				display: flex;
 
 				.image1 {
-					width: 35%
+					width: 35%;
 				}
 
 				.image2, .image3 {
-					width: 32.5%
+					width: 32.5%;
 				}
+			}
+		}
+	}
+
+	&.layout_14_14_12,
+	&.layout_12_14_14 {
+
+		.wrapper {
+
+			@include lg {
+				display: flex;
+
+				.image1 {
+					width: 52%;
+				}
+
+				.image2, .image3 {
+					width: 24%;
+				}
+			}
+		}
+	}
+
+	&.layout_14_14_12 {
+		.wrapper {
+
+			@include lg {
+				flex-direction: row-reverse;
 			}
 		}
 	}
