@@ -27,8 +27,8 @@
 	display: none;
 
 	@include lg {
+		// background-color: bisque;		
 		display: block;
-		// background-color: bisque;
 		height: 100vw;
 		width: 100%;
 		position: absolute;
@@ -36,10 +36,10 @@
 		margin-top: 40%;
 
 		> div {
+			// background-color: aqua;
 			width: 80%;
 			max-width: $MAX-WIDTH;
 			height: 100vw;
-			// background-color: aqua;
 			background-color: black;
 			margin: calc(92px + $GLOBAL-MARGIN) auto 0;
 		}
