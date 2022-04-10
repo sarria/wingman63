@@ -1,5 +1,6 @@
 import parse from 'html-react-parser';
 import cx from 'classnames'
+import Link from 'next/link'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -10,7 +11,7 @@ import arrowRight from '../images/arrow-right.png'
 
 const ImageSlider = ({data}) => {
 	const {linkPage, slider} = data;
-	// console.log('ImageSlider ::', linkPage, slider);
+	console.log('ImageSlider ::', linkPage, slider);
 
 	const settings = {
 		autoplay: true,
@@ -29,13 +30,15 @@ const ImageSlider = ({data}) => {
 				<Slider {...settings}>
 				{slider && slider.map((image, idx) => (
 					<div key={idx} className={styles.image}>
-						<Image
-							alt={image.altText}
-							src={image.sourceUrl}
-							layout='fill'
-							objectFit='cover'
-							
-						/>
+						<Link href={linkPage.slug!=='' ? linkPage.slug : 'javascript:void(0)'} passHref>
+							<Image
+								alt={image.altText}
+								src={image.sourceUrl}
+								layout='fill'
+								objectFit='cover'
+								
+							/>
+						</Link>
 					</div>
 				))}
 				</Slider>

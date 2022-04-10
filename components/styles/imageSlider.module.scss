@@ -11,6 +11,7 @@
 		line-height: 1.5;
 		font-weight: normal;
 		padding: 0 $GLOBAL-MARGIN;
+		cursor: pointer;
 	
 		@include lg {
 			width: 80%;
