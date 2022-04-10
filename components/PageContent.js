@@ -14,6 +14,7 @@ import Article from './Article'
 import Images from './Images'
 import Quotes from './Quotes'
 import ImageSlider from './ImageSlider'
+import Contact from './Contact'
 
 function PageContent({page, global}) {
 	// console.log("page ::", page)
@@ -67,7 +68,10 @@ function PageContent({page, global}) {
 						break;
 					case 'slider':
 						ele = <ImageSlider data={module} />
-						break;						
+						break;
+					case 'contact':
+						ele = <Contact data={module} />
+						break;
 					default:
 						// code block
 				}
