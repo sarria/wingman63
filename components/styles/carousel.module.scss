@@ -16,5 +16,32 @@
 
 .topMargin {
 	height: 1px;
-	margin-top: 40%;
+	margin-top: 45%;
+
+	@include lg {
+		margin-top: 40%;
+	}
+}
+
+.homePageWrapper {
+	display: none;
+
+	@include lg {
+		display: block;
+		// background-color: bisque;
+		height: 100vw;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		margin-top: 40%;
+
+		> div {
+			width: 80%;
+			height: 100vw;
+			// background-color: aqua;
+			background-color: black;
+			margin: calc(92px + $GLOBAL-MARGIN) auto 0;
+		}
+	}
+
 }

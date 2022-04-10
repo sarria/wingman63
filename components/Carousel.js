@@ -40,6 +40,7 @@ const Carousel = ({carousel}) => {
 				</div>
 			</div>
 			<div className={styles.topMargin} />
+			<div className={styles.homePageWrapper}><div></div></div>
 		</>
 	)
 }
