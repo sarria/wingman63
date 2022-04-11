@@ -23,6 +23,10 @@
 	
 		h2 {
 			margin-bottom: 0;
+
+			@include lg {
+				padding-left: $GLOBAL-MARGIN;
+			}
 		}
 	}	
 }
