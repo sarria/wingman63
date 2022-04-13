@@ -32,7 +32,7 @@
 				display: block;
 				width: auto;
 
-				@include md {
+				@include lg {
 					display: flex;
 					width: 60%;
 				}
@@ -110,6 +110,14 @@
 				.navigation {
 					width: 100%;
 					justify-content: space-around;
+
+					@include lg {
+						display: block;
+					}					
+
+					@include xl {
+						display: flex;
+					}					
 
 					.items {
 						width: fit-content;
