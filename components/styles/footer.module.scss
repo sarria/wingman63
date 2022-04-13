@@ -6,9 +6,11 @@
 	color: white;
 	margin-top: $GLOBAL-MARGIN * 4;
 	background-color: black;
+	padding-left: 35px;
 
 	@include md {
 		background-image: url('/images/footer-background-line.png');
+		padding-left: 0;
 	}
 
 	.wrapper {
@@ -28,6 +30,7 @@
 			display: flex;
 			flex-direction: column;
 			width: 100%;
+			padding-right: $GLOBAL-MARGIN;
 			padding-top: 80px;
 
 			@include md {
@@ -37,7 +40,6 @@
 
 			.gridContainer {
 				grid-template-columns: auto;
-				justify-content: center;
 
 				@include md {
 					grid-template-columns: auto auto;
@@ -116,7 +118,7 @@
 			}
 	
 			.navigation {
-				margin: 0 30px;
+				
 
 				@include md {
 					width: 100%;
@@ -126,12 +128,13 @@
 
 			.address {
 				padding-top: $GLOBAL-MARGIN;
-				padding-left: 62px;
-				margin: 0 30px;
+				padding-left: 45px;
+				margin: 0;
 
 				@include md {
 					width: fit-content;
 					padding: 0;
+					margin: 0 30px;
 				}
 
 				.smallLogo {
@@ -148,7 +151,7 @@
 	.copyRight {
 		margin-top: 50px;
 		padding-bottom: 20px;
-		padding-left: 92px;
+		padding-left: 45px;
 		font-size: 16px;
 		
 		@include md {
