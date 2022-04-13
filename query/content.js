@@ -81,6 +81,7 @@ export default function query(slug) {
 						}
 						modules {
 							moduleType
+							marginLeft
 							label
 							text
 							videoUrl
@@ -89,6 +90,7 @@ export default function query(slug) {
 							images {
 								image {
 									altText
+									databaseId
 									sourceUrl
 									mediaDetails {
 										width
@@ -153,6 +155,15 @@ export default function query(slug) {
 								mediaDetails {
 								  width
 								  height
+								}
+								customImagesFields {
+									linkto {
+										... on Page {
+											slug
+											title
+										}
+									}
+									anchor
 								}
 							}
 						}

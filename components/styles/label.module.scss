@@ -23,7 +23,9 @@
 	
 		h2 {
 			margin-bottom: 0;
+		}
 
+		h2.marginLeft {
 			@include lg {
 				padding-left: $GLOBAL-MARGIN;
 			}

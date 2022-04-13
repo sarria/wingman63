@@ -10,8 +10,8 @@ import arrowLeft from '../images/arrow-left.png'
 import arrowRight from '../images/arrow-right.png'
 
 const ImageSlider = ({data}) => {
-	const {linkPage, slider} = data;
-	console.log('ImageSlider ::', linkPage, slider);
+	const {slider, linkPage} = data;
+	console.log('ImageSlider ::', slider);
 
 	const settings = {
 		autoplay: true,
@@ -28,19 +28,22 @@ const ImageSlider = ({data}) => {
 		<div className={styles.root}>
 			<div className={styles.wrapper}>
 				<Slider {...settings}>
-				{slider && slider.map((image, idx) => (
+				{slider && slider.map((image, idx) => {
+					const linkTo = image.customImagesFields?.linkto?.slug || linkPage?.slug;
+					const anchor = image.customImagesFields?.anchor;
+					console.log('linkTo :: ', image.sourceUrl, linkTo, anchor)
+					return (
 					<div key={idx} className={styles.image}>
-						<Link href={linkPage.slug!=='' ? linkPage.slug : 'javascript:void(0)'} passHref>
+						<Link href={linkTo ? '/'+linkTo+'#'+anchor : 'javascript:void(0)'} passHref>
 							<Image
 								alt={image.altText}
 								src={image.sourceUrl}
 								layout='fill'
 								objectFit='cover'
-								
 							/>
 						</Link>
 					</div>
-				))}
+				)})}
 				</Slider>
 			</div>
 		</div>
