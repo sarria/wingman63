@@ -32,7 +32,7 @@
 
 			@include md {
 				display: block;
-				width: 50%;
+				width: fit-content;
 			}
 
 			.gridContainer {
@@ -49,11 +49,10 @@
 				}
 
 				.telephone {
-					display: flex;
-					justify-content: center;
 					color: $GOLDEN-COLOR;
-					margin-top: 40px;
-					font-size: 45px;
+					margin-left: 45px;					
+					margin-top: 80px;
+					font-size: 42px;
 					font-weight: 700;
 
 					a {
@@ -63,12 +62,9 @@
 
 					@include md {
 						display: block;
-						color: white;
-						display: flex;
-						align-items: flex-end;
-						margin-left: 30px;
+						color: $GOLDEN-COLOR;
 						margin-top: 26px;
-						font-size: unset;
+						font-size: 28px;
 						font-weight: 600;
 					}
 				}
@@ -76,11 +72,12 @@
 				.social {
 					display: flex;
 					justify-content: space-between;
+					width: 265px;
+					margin-left: 45px;
 					margin-top: 40px;
 					$ICO-WIDTH: 2;
 
 					@include md {
-						margin-left: 45px;
 						margin-top: 15px;
 						width: 265px;
 					}
@@ -111,32 +108,29 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			padding-top: 50px;
 
 			@include md {
-				width: 50%;
 				padding-top: 108px;
-			}
-
-			@include md {
 				flex-direction: row;
+				justify-content: flex-end;				
 			}
 	
-			.quote {
+			.navigation {
 				margin: 0 30px;
 
 				@include md {
-					width: 50%;
+					width: 100%;
 					margin: 0;
 				}				
 			}
 
 			.address {
 				padding-top: $GLOBAL-MARGIN;
+				padding-left: 62px;
 				margin: 0 30px;
 
 				@include md {
-					width: 40%;
+					width: fit-content;
 					padding: 0;
 				}
 
@@ -154,6 +148,8 @@
 	.copyRight {
 		margin-top: 50px;
 		padding-bottom: 20px;
+		padding-left: 92px;
+		font-size: 16px;
 		
 		@include md {
 			width: 80%;
@@ -161,6 +157,7 @@
 			max-width: $MAX-WIDTH;
 			margin-top: 100px;
 			margin: 0 auto;
+			padding-left: 90px;
 		}
 
 		.inner {

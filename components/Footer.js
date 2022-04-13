@@ -9,6 +9,7 @@ import facebookImg from '../images/facebook.png'
 import twitterImg from '../images/twitter.png'
 import instagramImg from '../images/instagram.png'
 import youTubeImg from '../images/youtube.png'
+import Navigation from './Navigation'
 
 const Footer = ({global}) => {
 	// console.log("footer global ::", global)
@@ -27,9 +28,9 @@ const Footer = ({global}) => {
 							</div>							
 						</div>
 						<div className=''>
-							<div className={styles.telephone}>
+							{/* <div className={styles.telephone}>
 								<Link href={'tel:' + global.telephone}>{global.telephone}</Link>
-							</div>
+							</div> */}
 						</div>							
 						<div className=''>
 							{(global.facebook || global.twitter || global.instagram || global.youtube) && 
@@ -82,14 +83,23 @@ const Footer = ({global}) => {
 										</a>
 									</div>
 								</div>}
-							</div>}						
+							</div>}	
+							<div className={styles.telephone}>
+								<Link href={'tel:' + global.telephone}>{global.telephone}</Link>
+							</div>					
 						</div>
 						
 					</div> 
 				</div>
 				<div className={styles.right}>
-					<div className={styles.quote}>
-						{parse(global.footerQuote)}
+					<div className={styles.navigation}>
+						<Navigation
+							isFooter={true}
+							navigationPicture={global.burgerNavigationPicture}
+							navigationLeft={global.burgerNavigationLeft}
+							navigationRightTop={global.burgerNavigationRightTop}
+							navigationRightBottom={global.burgerNavigationRightBottom}
+						/>
 					</div>
 					<div className={styles.address}>
 						{parse(global.address)}
@@ -104,9 +114,7 @@ const Footer = ({global}) => {
 				</div>
 			</div>
 			<div className={styles.copyRight}>
-				<div className={styles.inner}>
-					{parse(global.copyRight)}
-				</div>
+				{parse(global.copyRight)}
 			</div>
 		</footer>
 	)

@@ -49,6 +49,7 @@
 				.items a {
 					color: black;
 					text-decoration: none;
+					font-weight: normal;
 				}
 
 				.active,
@@ -85,5 +86,54 @@
 			}
 		}
 	
+	}
+}
+
+.root {
+
+	&.isFooter {
+		position: relative;
+		color: #f7f7f7;
+
+		.wrapper {
+			background-color: transparent;
+			font-size: unset;
+
+			.content {
+				display: flex;
+				padding: $GLOBAL-MARGIN 0 64px 62px;
+
+				@include md {
+					padding: 0;
+				}
+
+				.navigation {
+					width: 100%;
+					justify-content: space-around;
+
+					.items {
+						width: fit-content;
+					}
+
+					.item {
+						padding: 0px;
+					}
+
+					.right {
+						width: fit-content;
+
+						.top {
+							border-bottom-color: rgba(247,247,247,0.54);
+						}						
+					}
+
+					.items a {
+						color: #f7f7f7;
+						font-size: 18px;
+					}
+
+				}
+			}
+		}
 	}
 }

@@ -5,7 +5,6 @@ export default function query(slug) {
 			acfOptionsGlobalOptions {
 				global {
 				  address
-				  footerQuote
 				  copyRight
 				  email
 				  telephone

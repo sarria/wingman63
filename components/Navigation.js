@@ -26,11 +26,11 @@ const PrintNavigation = (items) => {
 	)
 }
 
-const Navigation = ({navigationPicture, navigationLeft, navigationRightTop, navigationRightBottom}) => {
+const Navigation = ({isFooter, navigationPicture, navigationLeft, navigationRightTop, navigationRightBottom}) => {
 	return (
 		<>
-			<input id="toggle" type="checkbox"></input>
-			<div className={cx('navigation', styles.root)}>
+			{!isFooter && <input id="toggle" type="checkbox"></input>}
+			<div className={cx('navigation', styles.root, {[styles.isFooter]: isFooter})}>
 				<div className={styles.wrapper}>
 					<div className={styles.content}>
 						<div className={styles.navigation}>
@@ -46,7 +46,7 @@ const Navigation = ({navigationPicture, navigationLeft, navigationRightTop, navi
 								</div>
 							</div>
 						</div>
-						<div className={styles.picture}>
+						{!isFooter && <div className={styles.picture}>
 							{navigationPicture && 
 							<Image
 								alt={navigationPicture.altText}
@@ -54,7 +54,7 @@ const Navigation = ({navigationPicture, navigationLeft, navigationRightTop, navi
 								width={navigationPicture.mediaDetails.width}
 								height={navigationPicture.mediaDetails.height}
 							/>}
-						</div>
+						</div>}
 					</div>
 				</div>
 			</div>

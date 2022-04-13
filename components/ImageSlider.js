@@ -11,7 +11,7 @@ import arrowRight from '../images/arrow-right.png'
 
 const ImageSlider = ({data}) => {
 	const {slider, linkPage} = data;
-	console.log('ImageSlider ::', slider);
+	// console.log('ImageSlider ::', slider);
 
 	const settings = {
 		autoplay: true,
@@ -31,10 +31,10 @@ const ImageSlider = ({data}) => {
 				{slider && slider.map((image, idx) => {
 					const linkTo = image.customImagesFields?.linkto?.slug || linkPage?.slug;
 					const anchor = image.customImagesFields?.anchor;
-					console.log('linkTo :: ', image.sourceUrl, linkTo, anchor)
+					// console.log('linkTo :: ', image.sourceUrl, linkTo, anchor)
 					return (
 					<div key={idx} className={styles.image}>
-						<Link href={linkTo ? '/'+linkTo+'#'+anchor : 'javascript:void(0)'} passHref>
+						<Link href={linkTo ? linkTo+'/#'+anchor : 'javascript:void(0)'} passHref>
 							<Image
 								alt={image.altText}
 								src={image.sourceUrl}
