@@ -16,105 +16,109 @@ const Footer = ({global}) => {
 	return (
 		<footer className={styles.root}>
 			<div className={styles.wrapper}>
-				<div className={styles.left}>
-					<div className={cx('grid-container', styles.gridContainer)}>
-						<div className=''>
-							<div className={styles.logo}>
-								<Image
-									alt=''
-									src={logo}
-									layout='responsive'
-								/>
+				<div className={styles.inner}>
+					<div className={styles.left}>
+						<div className={cx('grid-container', styles.gridContainer)}>
+							<div className=''>
+								<div className={styles.logo}>
+									<Image
+										alt=''
+										src={logo}
+										layout='responsive'
+									/>
+								</div>							
+							</div>
+							<div className=''>
+								{/* <div className={styles.telephone}>
+									<Link href={'tel:' + global.telephone}>{global.telephone}</Link>
+								</div> */}
 							</div>							
-						</div>
-						<div className=''>
-							{/* <div className={styles.telephone}>
-								<Link href={'tel:' + global.telephone}>{global.telephone}</Link>
-							</div> */}
+							<div className=''>
+								{(global.facebook || global.twitter || global.instagram || global.youtube) && 
+								<div className={styles.social}>
+									{global.facebook && 
+									<div className={cx(styles.ico)}>
+										<div className={styles.facebook}>
+											<a href={global.facebook} target="_blank" rel="noreferrer" >
+												<Image
+													alt=''
+													src={facebookImg}
+													layout='responsive'
+												/>
+											</a>
+										</div>
+									</div>}
+									{global.twitter &&
+									<div className={cx(styles.ico)}>
+										<div className={styles.twitter}>
+											<a href={global.twitter} target="_blank" rel="noreferrer" >
+												<Image
+													alt=''
+													src={twitterImg}
+													layout='responsive'
+												/>
+											</a>
+										</div>
+									</div>}
+									{global.instagram && 
+									<div className={cx(styles.ico)}>
+										<div className={styles.instagram}>
+											<a href={global.instagram} target="_blank" rel="noreferrer" >
+												<Image
+													alt=''
+													src={instagramImg}
+													layout='responsive'
+												/>
+											</a>
+										</div>
+									</div>}
+									{global.youtube && 
+									<div className={cx(styles.ico)}>
+										<div className={styles.youtube}>
+											<a href={global.youtube} target="_blank" rel="noreferrer" >
+												<Image
+													alt=''
+													src={youTubeImg}
+													layout='responsive'
+												/>
+											</a>
+										</div>
+									</div>}
+								</div>}	
+								<div className={styles.telephone}>
+									<Link href={'tel:' + global.telephone}>{global.telephone}</Link>
+								</div>					
+							</div>
+						</div> 
+						<div className={cx(styles.copyRight, styles.desktop)}>
+							{parse(global.copyRight)}
 						</div>							
-						<div className=''>
-							{(global.facebook || global.twitter || global.instagram || global.youtube) && 
-							<div className={styles.social}>
-								{global.facebook && 
-								<div className={cx(styles.ico)}>
-									<div className={styles.facebook}>
-										<a href={global.facebook} target="_blank" rel="noreferrer" >
-											<Image
-												alt=''
-												src={facebookImg}
-												layout='responsive'
-											/>
-										</a>
-									</div>
-								</div>}
-								{global.twitter &&
-								<div className={cx(styles.ico)}>
-									<div className={styles.twitter}>
-										<a href={global.twitter} target="_blank" rel="noreferrer" >
-											<Image
-												alt=''
-												src={twitterImg}
-												layout='responsive'
-											/>
-										</a>
-									</div>
-								</div>}
-								{global.instagram && 
-								<div className={cx(styles.ico)}>
-									<div className={styles.instagram}>
-										<a href={global.instagram} target="_blank" rel="noreferrer" >
-											<Image
-												alt=''
-												src={instagramImg}
-												layout='responsive'
-											/>
-										</a>
-									</div>
-								</div>}
-								{global.youtube && 
-								<div className={cx(styles.ico)}>
-									<div className={styles.youtube}>
-										<a href={global.youtube} target="_blank" rel="noreferrer" >
-											<Image
-												alt=''
-												src={youTubeImg}
-												layout='responsive'
-											/>
-										</a>
-									</div>
-								</div>}
-							</div>}	
-							<div className={styles.telephone}>
-								<Link href={'tel:' + global.telephone}>{global.telephone}</Link>
-							</div>					
-						</div>
-						
-					</div> 
-				</div>
-				<div className={styles.right}>
-					<div className={styles.navigation}>
-						<Navigation
-							isFooter={true}
-							navigationPicture={global.burgerNavigationPicture}
-							navigationLeft={global.burgerNavigationLeft}
-							navigationRightTop={global.burgerNavigationRightTop}
-							navigationRightBottom={global.burgerNavigationRightBottom}
-						/>
 					</div>
-					<div className={styles.address}>
-						{parse(global.address)}
-						<div className={styles.smallLogo}>
-							<Image
-								alt=''
-								src={logoicon}
-								layout='responsive'
+					<div className={styles.right}>
+						<div className={styles.navigation}>
+							<Navigation
+								isFooter={true}
+								navigationPicture={global.burgerNavigationPicture}
+								navigationLeft={global.burgerNavigationLeft}
+								navigationRightTop={global.burgerNavigationRightTop}
+								navigationRightBottom={global.burgerNavigationRightBottom}
 							/>
 						</div>
+						<div className={styles.address}>
+							{parse(global.address)}
+							<div className={styles.smallLogo}>
+								<Image
+									alt=''
+									src={logoicon}
+									layout='responsive'
+								/>
+							</div>
+						</div>
 					</div>
+					<div className={cx(styles.copyRight, styles.mobile)}>
+						{parse(global.copyRight)}
+					</div>						
 				</div>
-			</div>
-			<div className={styles.copyRight}>
-				{parse(global.copyRight)}
 			</div>
 		</footer>
 	)

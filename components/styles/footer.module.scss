@@ -6,7 +6,7 @@
 	color: white;
 	margin-top: $GLOBAL-MARGIN * 4;
 	background-color: black;
-	padding-left: 35px;
+	// padding-left: 35px;
 
 	@include md {
 		background-image: url('/images/footer-background-line.png');
@@ -15,134 +15,139 @@
 
 	.wrapper {
 		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
 
-		@include md {
-			width: 80%;
-			flex-direction: row;
-			max-width: $MAX-WIDTH;
-			margin: 0 auto;
-		}
-
-		.left {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-			padding-right: $GLOBAL-MARGIN;
-			padding-top: 80px;
-
-			@include md {
-				display: block;
-				width: fit-content;
-			}
-
-			.gridContainer {
-				grid-template-columns: auto;
-
-				@include md {
-					grid-template-columns: auto auto;
-					justify-content: left;
-				}
-
-				.logo {
-					width: 310px;
-				}
-
-				.telephone {
-					color: $GOLDEN-COLOR;
-					margin-left: 45px;					
-					margin-top: 80px;
-					font-size: 42px;
-					font-weight: 700;
-
-					a {
-						color: inherit;
-						text-decoration: none;
-					}
-
-					@include md {
-						display: block;
-						color: $GOLDEN-COLOR;
-						margin-top: 26px;
-						font-size: 28px;
-						font-weight: 600;
-					}
-				}
-
-				.social {
-					display: flex;
-					justify-content: space-between;
-					width: 265px;
-					margin-left: 45px;
-					margin-top: 40px;
-					$ICO-WIDTH: 2;
-
-					@include md {
-						margin-top: 15px;
-						width: 265px;
-					}
-
-					.ico {
-						position: relative;
-
-						.facebook {
-							width: calc(23px / $ICO-WIDTH);
-						}
-						.twitter {
-							width: calc(59px / $ICO-WIDTH);
-						}
-						.instagram {
-							width: calc(49px / $ICO-WIDTH);
-						}
-						.youtube {
-							width: calc(67px / $ICO-WIDTH);
-						}
-					}
-				}
-			}
-
-		}
-
-		.right {
-			width: 100%;
+		.inner {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			margin: 0 auto;
+			width: fit-content;			
 
 			@include md {
-				padding-top: 108px;
+				width: 80%;
 				flex-direction: row;
-				justify-content: flex-end;				
-			}
-	
-			.navigation {
-				
-
-				@include md {
-					width: 100%;
-					margin: 0;
-				}				
+				max-width: $MAX-WIDTH;
+				// margin: 0 auto;
 			}
 
-			.address {
-				padding-top: $GLOBAL-MARGIN;
-				padding-left: 45px;
-				margin: 0;
+			.left {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				// padding-right: $GLOBAL-MARGIN;
+				padding-top: 80px;
 
 				@include md {
+					display: block;
 					width: fit-content;
-					padding: 0;
-					margin: 0 30px;
 				}
 
-				.smallLogo {
-					position: relative;
-					width: 100%;
+				.gridContainer {
+					grid-template-columns: auto;
+
+					@include md {
+						grid-template-columns: auto auto;
+						justify-content: left;
+					}
+
+					.logo {
+						width: 310px;
+					}
+
+					.telephone {
+						color: $GOLDEN-COLOR;
+						margin-left: 45px;					
+						margin-top: 80px;
+						font-size: 42px;
+						font-weight: 700;
+
+						a {
+							color: inherit;
+							text-decoration: none;
+						}
+
+						@include md {
+							display: block;
+							color: $GOLDEN-COLOR;
+							margin-top: 26px;
+							font-size: 28px;
+							font-weight: 600;
+						}
+					}
+
+					.social {
+						display: flex;
+						justify-content: space-between;
+						width: 265px;
+						margin-left: 45px;
+						margin-top: 40px;
+						$ICO-WIDTH: 2;
+
+						@include md {
+							margin-top: 15px;
+							width: 265px;
+						}
+
+						.ico {
+							position: relative;
+
+							.facebook {
+								width: calc(23px / $ICO-WIDTH);
+							}
+							.twitter {
+								width: calc(59px / $ICO-WIDTH);
+							}
+							.instagram {
+								width: calc(49px / $ICO-WIDTH);
+							}
+							.youtube {
+								width: calc(67px / $ICO-WIDTH);
+							}
+						}
+					}
+				}
+
+			}
+
+			.right {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				@include md {
+					padding-top: 108px;
+					flex-direction: row;
+					justify-content: flex-end;				
+				}
+		
+				.navigation {
+					
+
+					@include md {
+						width: 100%;
+						margin: 0;
+					}				
+				}
+
+				.address {
+					padding-top: $GLOBAL-MARGIN;
+					padding-left: 45px;
 					margin: 0;
-					width: 175px;
-					padding-top: 20px;
+
+					@include md {
+						width: fit-content;
+						padding: 0;
+						margin: 0 30px;
+					}
+
+					.smallLogo {
+						position: relative;
+						width: 100%;
+						margin: 0;
+						width: 175px;
+						padding-top: 20px;
+					}
 				}
 			}
 		}
@@ -159,8 +164,8 @@
 			flex-direction: row;
 			max-width: $MAX-WIDTH;
 			margin-top: 100px;
-			margin: 0 auto;
-			padding-left: 90px;
+			// margin: 0 auto;
+			// padding-left: 90px;
 		}
 
 		.inner {
@@ -171,5 +176,21 @@
 				margin-left: 45px;
 			}
 		}		
+	}
+
+	.mobile {
+		display: block;
+
+		@include md {
+			display: none;
+		}
+	}
+
+	.desktop {
+		display: none;
+
+		@include md {
+			display: block;
+		}
 	}
 }

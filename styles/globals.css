@@ -43,9 +43,9 @@ gold {
   color: #f7b008;
 }
 
-/*
-
-*/
+.slick-arrow {
+  display: none !important;
+}
 
 .ratio_container .outer {
   width: 100%;
