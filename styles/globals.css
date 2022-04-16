@@ -43,7 +43,7 @@ gold {
   color: #f7b008;
 }
 
-.slick-arrow {
+.carousel .slick-arrow {
   display: none !important;
 }
 

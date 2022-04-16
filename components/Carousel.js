@@ -20,7 +20,7 @@ const Carousel = ({carousel}) => {
 
 	return (
 		<>
-			<div className={styles.root}>
+			<div className={'carousel ' + styles.root}>
 				<div className={styles.wrapper}>
 					<Slider {...settings}>
 					{carousel && carousel.map((image, idx) => (
