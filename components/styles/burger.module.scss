@@ -1,10 +1,11 @@
 @import '../../styles/variables.scss';
 
 .root {
+	// position: absolute;
+	position: fixed;
+	top: 25px;	
 	width: 100%;
 	z-index: 99;
-	position: absolute;
-	top: 25px;
 
 	.wrapper {
 		display: flex;

@@ -1,7 +1,9 @@
 @import '../../styles/variables.scss';
 
 .root {
-	position: relative;
+	// position: relative;
+	position: fixed;
+	top: 0;
 	width: 100%;
 	height: $PAGETOP-HEIGHT;
 	z-index: 8;

@@ -1,10 +1,11 @@
 @import '../../styles/variables.scss';
 
 .root {
-	position: absolute;
+	// position: absolute;
+	position: fixed;
+	top: 0px;	
 	width: 100%;
 	z-index: 9;
-	top: 0px;
 	color: black;
 
 	.wrapper {
