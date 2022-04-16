@@ -8,7 +8,7 @@ import styles from './styles/logo.module.scss'
 
 function Logo({ isHomePage }: { isHomePage: boolean }): ReactElement {
 	return (
-		<div className={cx('pageTop', styles.root, {[styles.isHomePage]: isHomePage})}>
+		<div className={cx('pageTop', styles.root, {[styles.isHomePage]: isHomePage}, {[styles.isInnerPage]: !isHomePage})}>
 			<div className={styles.wrapper}>
 				<div className={styles.logo}>
 					<Link href="/" passHref>

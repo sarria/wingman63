@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import styles from './styles/pageContent.module.scss'
+import cx from 'classnames'
 import Header from './Header'
 import Footer from './Footer'
 import Logo from './Logo'
@@ -48,7 +50,7 @@ function PageContent({page, global}) {
 	const isHomePage = page.slug === 'home-page';
 
 	return page ? (
-		<div className={isHomePage ? 'homePage' : 'innerPage'}>
+		<div className={cx({[styles.homePage]: isHomePage}, {[styles.innerPage]: !isHomePage})}>
 			<Header seo={page.seo} />
 
 			<Navigation
