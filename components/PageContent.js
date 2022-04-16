@@ -27,14 +27,16 @@ function PageContent({page, global}) {
 	useEffect(() => {
 		// ALL THIS JUST TO BE ABLE TO JUMP TO A HASH IN A PAGE. WOW
 		const handleRouteChange = (url, { shallow }) => {
-			console.log(
-				`Page changed to ${url} ${
-					shallow ? 'with' : 'without'
-				} shallow routing`
-			)
+			// console.log(
+			// 	`Page changed to ${url} ${
+			// 		shallow ? 'with' : 'without'
+			// 	} shallow routing`
+			// )
 		  	if (location.hash) {
-				console.log('location.hash ::', location.hash)
-				location = location
+				// location = location
+				const hash = location.hash.substring(1).replaceAll('%20', ' ')
+				const ele = document.getElementById(hash)
+				if (ele) window.scrollTo(0, ele.offsetTop + 350)
 			}		  
 		}
 	
@@ -50,7 +52,7 @@ function PageContent({page, global}) {
 	const isHomePage = page.slug === 'home-page';
 
 	return page ? (
-		<div className={cx({[styles.homePage]: isHomePage}, {[styles.innerPage]: !isHomePage})}>
+		<div className={cx({[styles.homePage]: isHomePage}, {[styles.innerPage]: !isHomePage})} id='pageContent'>
 			<Header seo={page.seo} />
 
 			<Navigation

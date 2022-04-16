@@ -25,7 +25,7 @@ const ImageSlider = ({data}) => {
 	};
 
 	return (
-		<div className={styles.root}>
+		<div className={styles.root} id='imageSlider'>
 			<div className={styles.wrapper}>
 				<Slider {...settings}>
 				{slider && slider.map((image, idx) => {
