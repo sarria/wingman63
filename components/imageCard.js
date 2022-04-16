@@ -5,7 +5,7 @@ import ImageRatio from './elements/ImageRatio'
 import styles from './styles/imageCard.module.scss'
 
 const ImageCard = ({image, ratio, hasPadding, linkPage}) => {
-	console.log('imageCard :: ', image, ratio)
+	// console.log('imageCard :: ', image, ratio)
 	const hasLink = image.linkPage?.slug ? 'hasLink' : ''
 	const label = image.linkLabel || image.linkPage?.title
 	const LinkTo = image.linkPage?.slug || linkPage?.slug || null

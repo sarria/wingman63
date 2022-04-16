@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import Header from './Header'
 import Footer from './Footer'
 import Logo from './Logo'
@@ -17,7 +19,31 @@ import ImageSlider from './ImageSlider'
 import Contact from './Contact'
 
 function PageContent({page, global}) {
+	const router = useRouter()
 	// console.log("page ::", page)
+
+	useEffect(() => {
+		// ALL THIS JUST TO BE ABLE TO JUMP TO A HASH IN A PAGE. WOW
+		const handleRouteChange = (url, { shallow }) => {
+			console.log(
+				`Page changed to ${url} ${
+					shallow ? 'with' : 'without'
+				} shallow routing`
+			)
+		  	if (location.hash) {
+				console.log('location.hash ::', location.hash)
+				location = location
+			}		  
+		}
+	
+		router.events.on('routeChangeComplete', handleRouteChange)
+	
+		// If the component is unmounted, unsubscribe
+		// from the event with the `off` method:
+		return () => {
+		  router.events.off('routeChangeComplete', handleRouteChange)
+		}
+	}, [])	
 
 	const isHomePage = page.slug === 'home-page';
 
