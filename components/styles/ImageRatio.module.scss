@@ -1,4 +1,7 @@
-.large {
+.large_container {
 	height: 300px;
-	overflow: hidden
+	
+	.inner {
+		height: 300px;
+	}
 }

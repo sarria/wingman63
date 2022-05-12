@@ -4,16 +4,16 @@ import styles from '../styles/ImageRatio.module.scss'
 
 const ImageRatio = ({image, ratio}) => {
 	return (
-		<div className={cx('ratio_container', {[styles.large]: !ratio})}>
+		<div className={cx('ratio_container', {[styles.large_container]: !ratio})}>
 			<div className='outer' style={{'paddingTop': ratio}}>
-				<div className='inner'>
+			<div className={cx('inner', {[styles.inner]: !ratio})}>
 					{image && 
 					<Image
 						alt={image.altText}
 						src={image.sourceUrl}
 						layout="fill"
 						objectFit="cover"
-						objectPosition="top center"
+						objectPosition="center"
 					/>}
 				</div>
 			</div>
