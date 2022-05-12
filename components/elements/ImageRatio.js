@@ -1,13 +1,12 @@
 import Image from 'next/image'
+import cx from 'classnames'
+import styles from '../styles/ImageRatio.module.scss'
 
 const ImageRatio = ({image, ratio}) => {
 	return (
-		<div className='ratio_container' style={{'height': (ratio ? 'auto' : '300px')}}>
-			<div className='outer' style={{
-				'paddingTop': ratio,
-				'height': (ratio ? 'auto' : '300px')
-			}}>
-				<div className='inner' style={{'height': (ratio ? 'auto' : '300px')}}>
+		<div className={cx('ratio_container', {[styles.large]: !ratio})}>
+			<div className='outer' style={{'paddingTop': ratio}}>
+				<div className='inner'>
 					{image && 
 					<Image
 						alt={image.altText}
