@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const ImageRatio = ({image, ratio}) => {
 	return (
-		<div className='ratio_container'>
+		<div className='ratio_container' style={{'height': (ratio ? 'auto' : '300px')}}>
 			<div className='outer' style={{
 				'paddingTop': ratio,
 				'height': (ratio ? 'auto' : '300px')
