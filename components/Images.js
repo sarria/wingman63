@@ -10,6 +10,15 @@ const Images = ({data}) => {
 
 	return (
 		<div className={cx(styles.root, styles['layout_' + imagesLayout], {[styles.paddingTop]: prevModuleType!=='images'}, {[styles.paddingBottom]: nextModuleType!=='images'})}>
+			{imagesLayout === '11' && 
+			<>
+				{images.length >= 1 &&<div className={styles.wrapper}>
+					{images[0]?.image && 
+					<div className={cx(styles.image1)}>
+						<ImageCard image={images[0]} hasPadding={hasPadding} linkPage={linkPage} />
+					</div>}
+				</div>}
+			</>}
 			{imagesLayout === '23_13' && 
 			<>
 				{images.length === 3 &&<div className={styles.wrapper}>

@@ -3,6 +3,7 @@ import cx from 'classnames'
 import Link from 'next/link'
 import ImageRatio from './elements/ImageRatio'
 import styles from './styles/imageCard.module.scss'
+import Image from 'next/image'
 
 const ImageCard = ({image, ratio, hasPadding, linkPage}) => {
 	// console.log('imageCard :: ', image, ratio)
