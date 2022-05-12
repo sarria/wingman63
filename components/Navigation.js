@@ -15,13 +15,21 @@ const PrintNavigation = (items) => {
 	// console.log("router.asPath ::", router.asPath)
 	return (
 		<>
-			{items.map((item) => (
-				<div key={item.page.slug} className={cx(styles.item, {[styles.active]: router.asPath === "/" + item.page.slug})}>
-					<Link href={"/" + (item.page.slug === 'home-page' ? '' : item.page.slug)} >
-						<a onClick={handleClick}>{item.page.title}</a>
-					</Link>
-				</div>
-			))}
+			{items.map((item) => {
+				console.log("item: ", item.page);
+				return (
+					<>
+						{item.page && 
+							<div key={item.page.slug} className={cx(styles.item, {[styles.active]: router.asPath === "/" + item.page.slug})}>
+								<Link href={"/" + (item.page.slug === 'home-page' ? '' : item.page.slug)} >
+									<a onClick={handleClick}>{item.page.title}</a>
+								</Link>
+							</div>
+						}
+					</>
+				)
+				
+			})}
 		</>
 	)
 }
