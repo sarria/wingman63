@@ -1,9 +1,9 @@
+import parse from 'html-react-parser';
 import Image from 'next/image'
 import Link from 'next/link'
 import cx from 'classnames'
 import styles from './styles/navigation.module.scss'
 import { useRouter } from "next/router";
-
 	
 const handleClick = () => {
 	document.getElementById('toggle').checked = false;
@@ -22,7 +22,7 @@ const PrintNavigation = (items) => {
 						{item.page && 
 							<div key={item.page.slug} className={cx(styles.item, {[styles.active]: router.asPath === "/" + item.page.slug})}>
 								<Link href={"/" + (item.page.slug === 'home-page' ? '' : item.page.slug)} >
-									<a onClick={handleClick}>{item.page.title}</a>
+									<a onClick={handleClick}>{parse(item.page.title.replace('/', '/<br/>'))}</a>
 								</Link>
 							</div>
 						}

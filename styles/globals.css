@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
-/* @import './variables.scss'; */
 
 html,
 body {
@@ -26,14 +25,27 @@ body {
 }
 
 .hasLink .inner {
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-	filter: grayscale(100%);			
+  
+}
+
+@media (min-width: 768px) {
+  .hasLink .inner {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }
 }
 
 .hasLink .inner:hover {
-	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-	filter: grayscale(0%);			
+
 }
+
+@media (min-width: 768px) {
+  .hasLink .inner:hover {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+  }
+}
+
 
 gold {
   color: #f7b008;
