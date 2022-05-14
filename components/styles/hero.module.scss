@@ -19,7 +19,9 @@
 			align-items: center;
 
 			.titleWrapper {
-				width: fit-content;
+				// width: fit-content;
+				width: 90%;
+				text-align: center;
 				font-size: 25px;
 				font-weight: 700;
 	
@@ -89,7 +91,7 @@
 						font-style: normal;
 						line-height: 1;
 						letter-spacing: normal;
-						text-align: left;
+						text-align: center;
 						padding: 0px 20px;
 					}
 				}			

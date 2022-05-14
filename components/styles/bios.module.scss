@@ -78,11 +78,10 @@
 
 					.text {
 						margin: $GLOBAL-MARGIN $GLOBAL-MARGIN 0 $GLOBAL-MARGIN;
-						text-align: center;
+						text-align: left;
 						// background-color: lightsalmon;
 
 						@include sm {
-							text-align: left;
 							margin: $GLOBAL-MARGIN 0 0 0;
 						}
 
