@@ -8,13 +8,9 @@
 .wrapper {
 	margin: 0;
 	padding: 0 $GLOBAL-MARGIN;
-	text-align: center;
+	text-align: left;
 	font-size: 18px;
 	line-height: 30px;
-
-	@include sm {
-		text-align: left;		
-	}
 
 	@include lg {
 		width: 80%;

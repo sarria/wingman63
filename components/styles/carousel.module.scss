@@ -3,7 +3,11 @@
 .root {
 	position: absolute;
 	width: 100%;
-	top: 0px;
+	top: 92px;
+
+	@include md {
+		top: 0px;
+	}
 
 	.wrapper {
 	
@@ -16,7 +20,11 @@
 
 .topMargin {
 	height: 1px;
-	margin-top: 45%;
+	margin-top: 80%;
+
+	@include md {
+		margin-top: 50%;
+	}
 
 	@include lg {
 		margin-top: 40%;
