@@ -82,7 +82,7 @@ const Newsletter = async (req, res) => {
     return res.status(201).json({ error: null });
   } catch (error) {
     return res.status(400).json({
-      error: `Ops!, something went wrong...`,
+      error: `Ops!, something went wrong... Send me an email at info@wingman63.com and I'll add you to the list.`,
     });
 
     // Report error to Sentry or whatever
