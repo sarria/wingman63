@@ -16,7 +16,7 @@ const PrintNavigation = (items) => {
 	return (
 		<>
 			{items.map((item) => {
-				console.log("item: ", item.page);
+				// console.log("item: ", item.page);
 				return (
 					<>
 						{item.page && 

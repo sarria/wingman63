@@ -172,6 +172,20 @@ export default function query(slug) {
 						metaDesc
 						metaKeywords
 					}
+					buttons {
+						next {
+						  ... on Page {
+							slug
+							title
+						  }
+						}
+						previous {
+						  ... on Page {
+							slug
+							title
+						  }
+						}
+					}
 					}
 				}
 			}

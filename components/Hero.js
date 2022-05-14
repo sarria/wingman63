@@ -19,7 +19,7 @@ function Hero({ title, mobileHeaderImage, desktopHeaderImage }) {
 									src={desktopHeaderImage.sourceUrl}
 									layout="fill"
 									objectFit="cover"
-									objectPosition="bottom center"
+									objectPosition="left center"
 								/>
 							}
 						</div>

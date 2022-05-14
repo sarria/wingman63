@@ -114,7 +114,7 @@ function PageContent({page, global}) {
 			})}
 
 			<Footer 
-				global={global} 
+				global={global} buttons={page.buttons}
 			/>
 		</div>		
 	) : <></>
