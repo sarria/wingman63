@@ -129,7 +129,6 @@ const Footer = ({global, buttons}) => {
 									/>
 								</div>
 							</div>
-							-.-.-.-4
 						</div>
 						<div className={cx(styles.copyRight, styles.mobile)}>
 							{parse(global.copyRight)}
