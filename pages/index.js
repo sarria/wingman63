@@ -13,6 +13,7 @@ function Index({ global, page }) {
 // It may be called again, on a serverless function, if
 // revalidation is enabled and a new request comes in
 export async function getStaticProps() {
+  console.log("==>", process.env.GRAPHQL + queryContent('home-page'));
 	const res = await fetch(process.env.GRAPHQL + queryContent('home-page'))
 	const data = await res.json()
 	const global = data.data?.acfOptionsGlobalOptions?.global || null

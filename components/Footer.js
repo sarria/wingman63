@@ -131,7 +131,7 @@ const Footer = ({global, buttons}) => {
 							</div>
 						</div>
 						<div className={cx(styles.copyRight, styles.mobile)}>
-							{parse(global.copyRight)} 2023
+							{parse(global.copyRight)}
 						</div>						
 					</div>
 				</div>
