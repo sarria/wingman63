@@ -1,12 +1,14 @@
 import queryContent from '../query/content'
-import NotFound from '../components/404'
-import PageContent from '../components/PageContent'
+// import NotFound from '../components/404'
+// import PageContent from '../components/PageContent'
+import UnderConstruction from '../components/UnderConstruction';
 
 // https://reactjsexample.com/minimal-carousel-component-for-react/
 
 function Index({ global, page }) {
   // console.log("Query ::", queryContent('home-page'))
-  return page ? <PageContent page={page} global={global} /> : <NotFound page={page} />
+  // return page ? <PageContent page={page} global={global} /> : <NotFound page={page} />
+  return <UnderConstruction />;
 }
 
 // This function gets called at build time on server-side.
