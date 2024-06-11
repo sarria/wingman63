@@ -128,11 +128,12 @@ const Footer = ({global, buttons}) => {
 										layout='responsive'
 									/>
 								</div>
+								-.-
 							</div>
 						</div>
 						<div className={cx(styles.copyRight, styles.mobile)}>
 							{parse(global.copyRight)}
-						</div>						
+						</div>
 					</div>
 				</div>
 			</footer>

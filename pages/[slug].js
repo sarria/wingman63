@@ -1,16 +1,13 @@
 import queryPaths from '../query/paths'
 import queryContent from '../query/content'
-// import NotFound from '../components/404'
-// import PageContent from '../components/PageContent'
-import UnderConstruction from '../components/UnderConstruction';
-
+import NotFound from '../components/404'
+import PageContent from '../components/PageContent'
 
 function Page({ global, page }) {
   // console.log("global :: ", global)
   // console.log("Page :: ", page)
   // console.log("Query ::", queryContent('about-us'))
-  // return page ? <PageContent page={page} global={global} /> : <NotFound page={page} />
-  return <UnderConstruction />;
+  return page ? <PageContent page={page} global={global} /> : <NotFound page={page} />
 }
 
 // This function gets called at build time on server-side.
